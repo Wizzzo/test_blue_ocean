@@ -8,7 +8,7 @@ pipeline {
             echo 'Building..'
             
           },
-          "": {
+          "error": {
             sh 'echo "the is in parallel build"'
             
           }
@@ -17,7 +17,16 @@ pipeline {
     }
     stage('Test') {
       steps {
-        echo 'Testing..'
+        parallel(
+          "Test": {
+            echo 'Testing..'
+            
+          },
+          "": {
+            echo 'thats is a a new message on the test step'
+            
+          }
+        )
       }
     }
     stage('Deploy') {
