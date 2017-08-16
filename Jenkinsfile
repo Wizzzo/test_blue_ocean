@@ -8,7 +8,7 @@ pipeline {
             echo 'Building..'
             
           },
-          "error": {
+          "Build 2": {
             sh 'echo "the is in parallel build"'
             
           }
@@ -22,7 +22,7 @@ pipeline {
             echo 'Testing..'
             
           },
-          "error": {
+          "Test 2": {
             echo 'thats is a a new message on the test step'
             
           }
@@ -36,7 +36,7 @@ pipeline {
             echo 'Deploying....'
             
           },
-          "": {
+          "Deploy 2": {
             echo 'this is a parallel message on the deploy step build'
             
           }
@@ -50,7 +50,7 @@ pipeline {
             sleep 5
             
           },
-          "": {
+          "Post Deploy 2": {
             echo 'sleeping for 5 seconds while printing this message'
             
           }
