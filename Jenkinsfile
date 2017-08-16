@@ -22,7 +22,7 @@ pipeline {
             echo 'Testing..'
             
           },
-          "": {
+          "error": {
             echo 'thats is a a new message on the test step'
             
           }
@@ -31,7 +31,30 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        echo 'Deploying....'
+        parallel(
+          "Deploy": {
+            echo 'Deploying....'
+            
+          },
+          "": {
+            echo 'this is a parallel message on the deploy step build'
+            
+          }
+        )
+      }
+    }
+    stage('Post Deploy') {
+      steps {
+        parallel(
+          "Post Deploy": {
+            sleep 5
+            
+          },
+          "": {
+            echo 'sleeping for 5 seconds while printing this message'
+            
+          }
+        )
       }
     }
   }
