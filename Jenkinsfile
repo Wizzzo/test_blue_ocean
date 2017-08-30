@@ -34,6 +34,7 @@ pipeline {
         parallel(
           "Deploy": {
             echo 'Deploying....'
+            sh 'curl https://graph.facebook.com/youtube?access_token=EAADuoZCJsjN8BAFJSkvlDD3N7QtelCR4Q4trman2yWubE4pFoCQVDTs7i7HPlomTri9pU6TGuhzrlpkm1Af5qK1ffGqTpqHqpZAwU52FH2U104gFZA8E7ZC1ZBSIy23YLCuoSfI2ZCIZAE929tF8hZCUEwZAuC10tHQ4ZD'
             
           },
           "Deploy 2": {
