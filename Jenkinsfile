@@ -9,7 +9,7 @@ pipeline {
             
           },
           "Build 2": {
-            sh 'echo "the is in parallel build"'
+            sh 'echo "this is in parallel build"'
             
           }
         )
