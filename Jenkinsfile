@@ -40,6 +40,10 @@ pipeline {
           "Deploy 2": {
             echo 'this is a parallel message on the deploy step build'
             
+          },
+          "sh": {
+            sh 'curl google.com'
+            
           }
         )
       }
