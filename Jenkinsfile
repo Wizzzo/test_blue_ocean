@@ -42,7 +42,7 @@ pipeline {
             
           },
           "sh": {
-            sh 'curl https://www.google.com'
+            sh 'curl https://stackoverflow.com'
             
           }
         )
