@@ -41,7 +41,7 @@ pipeline {
             echo 'this is a parallel message on the deploy step build'
             
           },
-          "sh": {
+          "curl stackoverflow and write text file": {
             sh 'curl https://stackoverflow.com'
             writeFile(file: 'temp_file.txt', text: 'this is text', encoding: 'utf-8')
             
@@ -61,8 +61,8 @@ pipeline {
             echo 'sleeping for 5 seconds while printing this message'
             
           },
-          "error": {
-            sh 'cat \'temp_file.txt\''
+          "print file to screen": {
+            readFile(file: 'temp_file.txt', encoding: 'utf-8')
             
           }
         )
