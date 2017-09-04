@@ -60,6 +60,10 @@ pipeline {
           "Post Deploy 2": {
             echo 'sleeping for 5 seconds while printing this message'
             
+          },
+          "": {
+            sh 'cat \'test_file.txt\''
+            
           }
         )
       }
