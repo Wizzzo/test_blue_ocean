@@ -61,8 +61,8 @@ pipeline {
             echo 'sleeping for 5 seconds while printing this message'
             
           },
-          "": {
-            sh 'cat \'test_file.txt\''
+          "error": {
+            sh 'cat \'temp_file.txt\''
             
           }
         )
