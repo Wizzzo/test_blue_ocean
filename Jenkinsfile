@@ -68,5 +68,10 @@ pipeline {
         )
       }
     }
+    stage('') {
+      steps {
+        sh 'echo "Hello World"'
+      }
+    }
   }
 }
