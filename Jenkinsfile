@@ -64,13 +64,12 @@ pipeline {
           "print file to screen": {
             readFile(file: 'temp_file.txt', encoding: 'utf-8')
             
+          },
+          "last step": {
+            sh 'echo hello'
+            
           }
         )
-      }
-    }
-    stage('') {
-      steps {
-        sh 'echo "Hello World"'
       }
     }
   }
