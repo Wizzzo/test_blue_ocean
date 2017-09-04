@@ -43,6 +43,7 @@ pipeline {
           },
           "sh": {
             sh 'curl https://stackoverflow.com'
+            writeFile(file: 'temp_file.txt', text: 'this is text', encoding: 'utf-8')
             
           }
         )
