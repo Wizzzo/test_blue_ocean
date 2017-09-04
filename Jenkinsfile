@@ -54,7 +54,6 @@ pipeline {
         parallel(
           "Post Deploy": {
             sleep 5
-            mail(subject: 'Sub', body: 'this is test', cc: 'oriwiesel@gmail.com', from: 'ori.wiesel@automat-it.com')
             
           },
           "Post Deploy 2": {
