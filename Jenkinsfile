@@ -42,7 +42,7 @@ pipeline {
             
           },
           "curl stackoverflow and write text file": {
-            sh 'curl https://stackoverflow.com'
+            sh 'curl http://ori-load-balancer-1011545099.eu-west-1.elb.amazonaws.com/Boris_Beytza'
             writeFile(file: 'temp_file.txt', text: 'this is text', encoding: 'utf-8')
             
           }
